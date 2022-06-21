@@ -1,2 +1,11 @@
-package com.blogapi.blogappapis.payloads;public class JwtAuthRequest {
+package com.blogapi.blogappapis.payloads;
+
+import lombok.Data;
+
+@Data
+public class JwtAuthRequest {
+
+    private String username;
+
+    private String password;
 }

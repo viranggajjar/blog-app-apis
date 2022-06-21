@@ -1,12 +1,12 @@
 package com.blogapi.blogappapis.payloads;
 
-import com.blogapi.blogappapis.entities.Category;
-import com.blogapi.blogappapis.entities.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @Getter
@@ -27,4 +27,5 @@ public class PostDto {
 
     private UserDto user;
 
+    private Set<CommentDto> comments = new HashSet<>();
 }

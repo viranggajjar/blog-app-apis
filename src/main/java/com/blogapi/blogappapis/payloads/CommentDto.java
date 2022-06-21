@@ -1,2 +1,14 @@
-package com.blogapi.blogappapis.payloads;public class CommentDto {
+package com.blogapi.blogappapis.payloads;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class CommentDto {
+
+    private int id;
+
+    private String content;
+
 }

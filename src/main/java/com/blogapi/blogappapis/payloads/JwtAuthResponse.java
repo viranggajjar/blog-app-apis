@@ -1,4 +1,4 @@
-package com.blogapi.blogappapis.security;
+package com.blogapi.blogappapis.payloads;
 
 import lombok.Data;
 

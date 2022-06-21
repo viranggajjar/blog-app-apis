@@ -7,6 +7,7 @@ import com.blogapi.blogappapis.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -32,8 +33,9 @@ public class UserController {
         return ResponseEntity.ok(updatedUser);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN_USER')")
     @DeleteMapping("/{userId}")
-    public ResponseEntity<?> deleteUser(@RequestBody UserDto userDto,@PathVariable("userId") Integer userId){
+    public ResponseEntity<?> deleteUser(@PathVariable("userId") Integer userId){
         this.userService.deleteUser(userId);
         return new ResponseEntity<ApiResponse>(new ApiResponse("User Deleted Successfully",true),HttpStatus.OK);
     }
