@@ -37,7 +37,7 @@ public class BlogAppApisApplication implements CommandLineRunner {
        // System.out.println(this.passwordEncoder.encode("virangs"));
 
         try {
-            /*Role role = new Role();
+            Role role = new Role();
             role.setId(AppConstants.ADMIN_USER);
             role.setName("ADMIN_USER");
 
@@ -47,7 +47,7 @@ public class BlogAppApisApplication implements CommandLineRunner {
 
             List<Role> roles =  List.of(role,role1);
 
-            List<Role> result = this.roleRepo.saveAll(roles);
+            /*List<Role> result = this.roleRepo.saveAll(roles);
 
             result.forEach(r->{
                 System.out.println(modelMapper().map(r, RoleDto.class).getName());
